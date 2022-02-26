@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Corner Reflector Antenna Calculator" HorizontalAlignment="Center" Margin="0,61,0,0" VerticalAlignment="Top" FontSize="22" HorizontalContentAlignment="Center"/>
+        <Label Content="Copyright N.Booth, M0CVO 2022 for Mogpie Software" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="StartBtn" Content="Start" HorizontalAlignment="Left" Margin="110,354,0,0" VerticalAlignment="Top" Width="90" FontSize="16" Height="29" Click="StartBtn_Click"/>
+        <Button x:Name="ExitBtn" Content="Exit" HorizontalAlignment="Left" Margin="579,354,0,0" VerticalAlignment="Top" FontSize="16" Width="90" Height="30" Click="ExitBtn_Click"/>
+
     </Grid>
 </Window>

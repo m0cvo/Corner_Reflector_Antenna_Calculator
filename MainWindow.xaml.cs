@@ -24,5 +24,23 @@ namespace Corner_Reflector_Antenna_Calculator
         {
             InitializeComponent();
         }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Exit();
+        }
+
+        private void Exit()
+        {
+            MessageBox.Show("Goodbye");
+            Application.Current.Shutdown();
+        }
+
+        private void StartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 window1 = new Window1();
+            window1.Show();
+            this.Hide();
+        }
     }
 }
