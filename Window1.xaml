@@ -8,11 +8,21 @@
         Title="Corner Reflector Antenna" Height="450" Width="800">
     <Grid>
         <Image HorizontalAlignment="Left" Height="344" Margin="10,38,0,0" VerticalAlignment="Top" Width="462" Source="/CornerReflector.jpg"/>
-        <Button Content="Close" HorizontalAlignment="Left" Margin="695,382,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="655,364,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click" FontSize="14" Height="30"/>
         <Label Content="Enter Frequency in Mhz:" HorizontalAlignment="Left" Margin="366,63,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label Content="SIde length (l):" HorizontalAlignment="Left" Margin="366,97,0,0" VerticalAlignment="Top" FontSize="14" Width="158"/>
-        <Label Content="Spacing to dipole (s):" HorizontalAlignment="Left" Margin="366,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.16,0.597" FontSize="14" Width="158"/>
-        <Label Content="Angle between sides (a):" HorizontalAlignment="Left" Margin="362,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.081,0.107" FontSize="14" Width="162"/>
+        <Label Content="SIde length (l):" HorizontalAlignment="Left" Margin="366,130,0,0" VerticalAlignment="Top" FontSize="14" Width="158"/>
+        <Label Content="Spacing to dipole (s):" HorizontalAlignment="Left" Margin="366,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.16,0.597" FontSize="14" Width="158"/>
+        <Label Content="Select angle in degrees (a):" HorizontalAlignment="Left" Margin="366,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.081,0.107" FontSize="14" Width="181"/>
+        <TextBox x:Name="freqBox" HorizontalAlignment="Left" Margin="566,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox x:Name="sideBox" HorizontalAlignment="Left" Margin="567,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" IsReadOnlyCaretVisible="True"/>
+        <TextBox x:Name="spaceBox" HorizontalAlignment="Left" Margin="567,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" RenderTransformOrigin="0.506,0.531" IsReadOnlyCaretVisible="True"/>
+        <RadioButton Content="90" GroupName="AngleGroup" HorizontalAlignment="Left" Margin="566,105,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="60" GroupName="AngleGroup" HorizontalAlignment="Left" Margin="610,105,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="45" GroupName="AngleGroup"  HorizontalAlignment="Left" Margin="655,105,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="CalculateBtn" Content="Calculate" HorizontalAlignment="Left" Margin="566,234,0,0" VerticalAlignment="Top" FontSize="14" Width="90" Height="30"/>
+        <Label Content="Gain dBd:" HorizontalAlignment="Left" Margin="366,193,0,0" VerticalAlignment="Top" FontSize="14" Width="158"/>
+        <TextBox x:Name="gainBox" HorizontalAlignment="Left" Margin="566,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Button x:Name="helpBtn" Content="Help" HorizontalAlignment="Left" Margin="655,316,0,0" VerticalAlignment="Top" FontSize="14" Width="90" Height="30" Click="helpBtn_Click"/>
 
     </Grid>
 </Window>

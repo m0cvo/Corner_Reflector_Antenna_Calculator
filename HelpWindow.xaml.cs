@@ -15,27 +15,20 @@ using System.Windows.Shapes;
 namespace Corner_Reflector_Antenna_Calculator
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for HelpWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class HelpWindow : Window
     {
-        public Window1()
+        public HelpWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
-        }
-
-        private void helpBtn_Click(object sender, RoutedEventArgs e)
-        {
-            HelpWindow helpWindow = new HelpWindow();
-            helpWindow.Show();
-            this.Hide();
         }
     }
 }
