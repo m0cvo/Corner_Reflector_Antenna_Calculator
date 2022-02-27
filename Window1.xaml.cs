@@ -37,5 +37,33 @@ namespace Corner_Reflector_Antenna_Calculator
             helpWindow.Show();
             this.Hide();
         }
+
+        private void CalculateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double freqIn = double.Parse(freqBox.Text);
+                if (RBtn1.IsChecked == true)
+                    gainBox.Text = "3.33";
+                else if (RBtn2.IsChecked == true)
+                    gainBox.Text = "5";
+                else if (RBtn3.IsChecked == true)
+                    gainBox.Text = "6.67";
+                double dipole = ((300 / freqIn) / 2) * 0.96;
+                double dip2 = Math.Round(dipole, 2);
+                DipBox.Text = dip2.ToString(); 
+                double length = ((300 / freqIn) * 2);
+                double length2 = Math.Round(length, 2);
+                sideBox.Text = length2.ToString();
+                double space = ((300 / freqIn) / 2);
+                double space2 = Math.Round(space, 2);
+                spaceBox.Text = space2.ToString();
+                double width = length2;
+                WidthBox.Text = width.ToString();
+            }
+            catch (Exception ex)
+            { Console.WriteLine(ex.Message); }
+
+        }
     }
 }

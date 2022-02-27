@@ -26,8 +26,8 @@ namespace Corner_Reflector_Antenna_Calculator
 
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            Window1 window1 = new Window1();
+            window1.Show();
             this.Close();
         }
     }
