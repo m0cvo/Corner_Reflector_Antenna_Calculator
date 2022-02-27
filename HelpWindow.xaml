@@ -6,8 +6,31 @@
         xmlns:local="clr-namespace:Corner_Reflector_Antenna_Calculator"
         mc:Ignorable="d"
         Title="HelpWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="10">
         <Button x:Name="CloseBtn" Content="Close" HorizontalAlignment="Left" Margin="652,367,0,0" VerticalAlignment="Top" FontSize="14" Width="90" Height="30" Click="CloseBtn_Click"/>
+        <RichTextBox Margin="35,10,58,113">
+            <FlowDocument>
+                <Paragraph FontSize="14">
+                    <Run Text="Corner reflector Antenna Calculator" FontSize="14"/>
+                </Paragraph>
+                <Paragraph FontSize="14">
+                    <Run Text="Copyright (c) N.Booth 2022 for Mogpie"/>
+                </Paragraph>
+                <Paragraph FontSize="12">
+                    <Run Text="1. Enter the frequency you wish to perform the calculation on (in MHz) in the box at the top."/>
+                </Paragraph>
+                <Paragraph FontSize="12">
+                    <Run Text="2. Choose the angle of the reflector using the rado buttons"/>
+                </Paragraph>
+                <Paragraph FontSize="12">
+                    <Run Text="3. Click Calculate to show the values. These are all in metres (except gain which is in dBd)"/>
+                </Paragraph>
+                <Paragraph FontSize="12">
+                    <Run Text="Note, the driven element is a dipole and as such should be fed at the centre with 50 ohm feeder. Final matching can be achieved by adjusting the spacing (s).  For frequencies below 144MHz this antenna may be 
+large for some applications and so it is more suited to higher frequencies and is ideal for frequencies above 1.2Ghz."/>
+                </Paragraph> 
+            </FlowDocument>
+        </RichTextBox>
 
     </Grid>
 </Window>
