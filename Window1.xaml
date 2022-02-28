@@ -10,8 +10,8 @@
         <Image HorizontalAlignment="Left" Height="344" Margin="10,38,0,0" VerticalAlignment="Top" Width="462" Source="/CornerReflector.jpg"/>
         <Button Content="Close" HorizontalAlignment="Left" Margin="671,364,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click" FontSize="14" Height="30"/>
         <Label Content="Enter Frequency in Mhz:" HorizontalAlignment="Left" Margin="366,63,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label Content="SIde length (l):" HorizontalAlignment="Left" Margin="366,130,0,0" VerticalAlignment="Top" FontSize="14" Width="158"/>
-        <Label Content="Spacing to dipole (s):" HorizontalAlignment="Left" Margin="366,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.16,0.597" FontSize="14" Width="158"/>
+        <Label Content="Side length in metres (l):" HorizontalAlignment="Left" Margin="366,130,0,0" VerticalAlignment="Top" FontSize="14" Width="158"/>
+        <Label Content="Spacing to dipole (in m) (s):" HorizontalAlignment="Left" Margin="366,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.16,0.597" FontSize="14" Width="158"/>
         <Label Content="Select angle in degrees (a):" HorizontalAlignment="Left" Margin="366,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.081,0.107" FontSize="14" Width="181"/>
         <TextBox x:Name="freqBox" HorizontalAlignment="Left" Margin="566,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <TextBox x:Name="sideBox" HorizontalAlignment="Left" Margin="567,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" IsReadOnlyCaretVisible="True"/>
@@ -27,6 +27,7 @@
         <TextBox x:Name="WidthBox" HorizontalAlignment="Left" Margin="567,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <Label Content="Length of driven element:" HorizontalAlignment="Left" Margin="368,216,0,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox x:Name="DipBox" HorizontalAlignment="Left" Margin="567,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <Label Content="All lengths in metres" HorizontalAlignment="Left" Margin="366,29,0,0" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>

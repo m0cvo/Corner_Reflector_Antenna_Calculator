@@ -42,13 +42,30 @@ namespace Corner_Reflector_Antenna_Calculator
         {
             try
             {
-                double freqIn = double.Parse(freqBox.Text);
+                double freqIn;
+                //
+                //Test for valid input
+                //if (freqBox.Text == null) { MessageBox.Show("Please enter a numerical value for the frequency!"); }                    
+                bool isNumeric = double.TryParse(freqBox.Text, out double n);
+                if (isNumeric == false) { MessageBox.Show("please enter numerical value only!"); }
+                
+                //convert text input to numerical double
+                freqIn = double.Parse(freqBox.Text);
+                //adn ensure value is greater than 0
+                if(freqIn <= 0) { MessageBox.Show("Please enter a frequency > 0!"); }
+
+                //Radio button selection
                 if (RBtn1.IsChecked == true)
                     gainBox.Text = "3.33";
                 else if (RBtn2.IsChecked == true)
                     gainBox.Text = "5";
                 else if (RBtn3.IsChecked == true)
                     gainBox.Text = "6.67";
+                //Test for valid selection
+                else if (RBtn1.IsChecked == false && RBtn2.IsChecked == false && RBtn3.IsChecked == false)
+                    MessageBox.Show("Please select angle!");
+
+                //Do calculations
                 double dipole = ((300 / freqIn) / 2) * 0.96;
                 double dip2 = Math.Round(dipole, 2);
                 DipBox.Text = dip2.ToString(); 
